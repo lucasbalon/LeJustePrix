@@ -1,0 +1,41 @@
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.res {
+    animation: fadeIn 0.5s ease-in 0s 1 normal forwards;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(.8)
+    }
+}
+
+.cursor {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    position: absolute;
+    animation: pulse .6s infinite alternate;
+    z-index: 10000
+}
+
+* {
+    cursor: none !important;
+}
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
